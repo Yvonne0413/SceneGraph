@@ -59,6 +59,8 @@ class Checkpointer(object):
             # no checkpoint could be found
             self.logger.info("No checkpoint found. Initializing model from scratch")
             return {}
+        print("inside utils/checkpoint.py", f)
+        f = '/content/drive/MyDrive/cs224w/checkpoints/upload_causal_motif_sgdet/model_0028000.pth'
         self.logger.info("Loading checkpoint from {}".format(f))
         checkpoint = self._load_file(f)
         self._load_model(checkpoint, load_mapping)

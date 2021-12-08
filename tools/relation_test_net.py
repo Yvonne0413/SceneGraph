@@ -71,7 +71,9 @@ def main():
     use_mixed_precision = cfg.DTYPE == 'float16'
     amp_handle = amp.init(enabled=use_mixed_precision, verbose=cfg.AMP_VERBOSE)
 
+    print("check cfg", cfg)
     output_dir = cfg.OUTPUT_DIR
+    print("check cfg weight", cfg.MODEL.WEIGHT)
     checkpointer = DetectronCheckpointer(cfg, model, save_dir=output_dir)
     _ = checkpointer.load(cfg.MODEL.WEIGHT)
 

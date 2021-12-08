@@ -5,7 +5,7 @@ INPUT:
   MAX_SIZE_TEST: 1000
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
-  WEIGHT: "catalog://ImageNetPretrained/FAIR/20171220/X-101-32x8d"
+  WEIGHT: "/content/drive/MyDrive/cs224w/checkpoints/upload_causal_motif_predcls/model_0030000.pth"
   BACKBONE:
     CONV_BODY: "R-101-FPN" # VGG-16
   RESNETS:
